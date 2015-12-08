@@ -1,0 +1,13 @@
+---
+name: preferences-service
+memory: 512M
+instances: 2
+host: preferences
+path: ./preferences-1.0.0-RELEASE.jar
+services:
+- applogger
+- spring-app-dynamics-agent
+env:
+  spring.profiles.active: cloud
+  loglevel: INFO
+   

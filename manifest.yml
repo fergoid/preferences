@@ -1,0 +1,9 @@
+---
+name: preferences-service
+memory: 512M
+instances: 1
+host: preferences
+domain: mybluemix.net
+path: target/preferences-1.0.0-RELEASE.jar
+env:
+  loglevel: DEBUG
