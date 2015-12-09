@@ -25,7 +25,7 @@ public class ApplicationTests {
 		Preferences prefs = new Preferences();
 		prefs.setPartyReference("12345678");
 		prefs.setPreference("email", "yes");
-		prefs.setPreference("email.address", "mr12345678@fil.com");
+		prefs.setPreference("email.address", "mr12345678@fergoid.com");
 		prefs.setPreference("mobile", "no");
 		prefs.setPreference("mobile phone", "012345 7891234");
 		//preferenceService.savePreferences(prefs);
