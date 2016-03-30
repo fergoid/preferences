@@ -4,18 +4,18 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 
 public class Preferences implements Serializable {
 
 	public Preferences() {
-		preferences = new HashMap<String, String>();
+		preferences = new HashMap<>();
 	}
 
 	@NotNull
 	private String PartyReference;
 
-	private HashMap<String, String> preferences;
+	private final Map<String, String> preferencess;
 	
 	/**
 	 * 
@@ -30,7 +30,7 @@ public class Preferences implements Serializable {
 		PartyReference = partyReference;
 	}
 
-	public HashMap<String, String> getPreferences() {
+	public Map<String, String> getPreferences() {
 		return preferences;
 	}
 
@@ -44,7 +44,7 @@ public class Preferences implements Serializable {
 
 	@Override
 	public String toString() {
-		StringBuffer sb=new StringBuffer();
+		StringBuilder sb=new StringBuilder();
 		sb.append(PartyReference).append(" - ").append(preferences.toString());
 		return sb.toString();
 	}

@@ -39,7 +39,7 @@ public class PreferencesController {
 	public ResponseEntity<Preferences> getPreferences(@PathVariable String partyReference) {
 		HttpStatus returnCode = HttpStatus.OK;
 		Preferences prefs = new Preferences();
-		HashMap<String, String> entries = preferenceService.getPreferences(partyReference);
+		Map<String, String> entries = preferenceService.getPreferences(partyReference);
 		prefs.setPartyReference(partyReference);
 		prefs.setPreferences(entries);
 		LOGGER.info("returning " + prefs.toString());
